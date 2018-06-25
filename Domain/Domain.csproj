@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3975E1A3-C19B-455C-AEB1-06C5BCEAC2DF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Domain</RootNamespace>
+    <AssemblyName>Domain</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Logic\Converter\TimeToModel\Header\IHeaderConverter.cs" />
+    <Compile Include="Logic\Converter\TimeToModel\Hour\IHourConverter.cs" />
+    <Compile Include="Logic\Converter\TimeToModel\Hour\IHourRow1Converter.cs" />
+    <Compile Include="Logic\Converter\TimeToModel\Hour\IHourRow2Converter.cs" />
+    <Compile Include="Logic\Converter\TimeToModel\Minute\IMinuteConverter.cs" />
+    <Compile Include="Logic\Converter\TimeToModel\Minute\IMinuteRow1Converter.cs" />
+    <Compile Include="Logic\Converter\TimeToModel\Minute\IMinuteRow2Converter.cs" />
+    <Compile Include="Logic\Converter\TimeToString\IToStringConverter.cs" />
+    <Compile Include="Logic\Converter\TimeToString\ToStringConverter.cs" />
+    <Compile Include="Logic\Converter\TimeToModel\ToModelConverter.cs" />
+    <Compile Include="Logic\Converter\TimeToModel\Header\HeaderConverter.cs" />
+    <Compile Include="Logic\Converter\TimeToModel\Hour\HourRow1Converter.cs" />
+    <Compile Include="Logic\Converter\TimeToModel\Hour\HourRow2Converter.cs" />
+    <Compile Include="Logic\Converter\TimeToModel\Hour\HourConverter.cs" />
+    <Compile Include="Logic\Converter\TimeToModel\IToModelConverter.cs" />
+    <Compile Include="Logic\Converter\TimeToModel\Minute\MinuteRow1Converter.cs" />
+    <Compile Include="Logic\Converter\TimeToModel\Minute\MinuteRow2Converter.cs" />
+    <Compile Include="Logic\Converter\TimeToModel\Minute\MinuteConverter.cs" />
+    <Compile Include="Logic\Extensions\ModelToStringExtensions.cs" />
+    <Compile Include="Logic\Factory\BerlinClockConverterFactory.cs" />
+    <Compile Include="Logic\Parser\ITimeParser.cs" />
+    <Compile Include="Logic\Parser\TimeParser.cs" />
+    <Compile Include="Model\Clock\BerlinClock.cs" />
+    <Compile Include="Model\CustomTime.cs" />
+    <Compile Include="Model\Clock\Header\HeaderRow.cs" />
+    <Compile Include="Model\Clock\Hour\HourRow1.cs" />
+    <Compile Include="Model\Clock\Hour\HourRow2.cs" />
+    <Compile Include="Model\Clock\Hour\HourRows.cs" />
+    <Compile Include="Model\Clock\Minute\MinuteRow1.cs" />
+    <Compile Include="Model\Clock\Minute\MinuteRow2.cs" />
+    <Compile Include="Model\Clock\Minute\MinuteRows.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Enum\RedLightEnum.cs" />
+    <Compile Include="Enum\YellowLightEnum.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
